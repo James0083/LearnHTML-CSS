@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유재원 과제(2023-02-27)</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            width: 90%;
+            margin: auto;
+            /* text-align: center; */
+        }
+        h1{
+            color: navy;
+            text-align: center;
+        }
+        table{
+            /* width: 90%; */
+            margin: auto;
+        }
+        th.title{
+            text-align: left;
+            padding-left: 10px;
+            background-color: skyblue;
+            font-size: 15pt; 
+            color: blue;
+        }
+        #sTitle{
+            background-color: blanchedalmond;
+            text-align: right;
+            padding-right: 5px;
+            width: 20%;
+        }
+        #caution{
+            font-size: 9pt; 
+            color: blue;
+        }
+        /* div{
+            
+        } */
+    </style>
+</head>
+<body>
+    <div >
+        <h1>회원가입</h1>
+        <form name="frm" action="signup" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="title" colspan="2">&gt;아이디(ID)정보</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" id="sTitle">*아이디</td>
+                        <td>
+                            <input type="text" name="userid" id="userid">
+                            <input type="button" value="중복확인">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="caution">(4~12자 영자/숫자 가능, 한글, 특수문자 ID는 사용할 수 없습니다.)</td>
+                    </tr>
+                    <tr>
+                        <td id="sTitle">*비밀번호</td>
+                        <td>
+                            <input type="text" name="pwd" id="pwd">
+                            <span id="caution">(4~8자 이내로 만들어주세요)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="sTitle">*비밀번호 확인</td>
+                        <td>
+                            <input type="text" name="pwd" id="pwd">
+                            <span id="caution">(위 번호와 같이 입력해 주세요)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="sTitle">*본인확인 질문</td>
+                        <td>
+                            <select name="favoritFood" id="favoritFood">
+                                <option value="Food">좋아하는 음식은?</option>
+                                <option value="BornIn">태어난 장소는?</option>
+                                <option value="Graduated">졸업한 초등학교는?</option>
+                                <option value="fName">아버지 성함은?</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="sTitle">*본인확인 답</td>
+                        <td>
+                            <input type="text" name="identifi" id="identifi">
+                            <span id="caution">(비밀번호 분실, 변경시 본인확인을 위한 정보)</span>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th class="title" colspan="2">&gt;개인정보</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td id="sTitle">*이름(한글)</td>
+                    <td>
+                        <input type="text" name="identifi" id="identifi">
+                        <span id="caution">(예:박정민)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sTitle">성별</td>
+                    <td>
+                        <input type="radio" name="gender" id="gender" value="Male">남 &nbsp;
+                        <input type="radio" name="gender" id="gender" value="Female">여
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sTitle">생년월일</td>
+                    <td>
+                        <input type="text" name="Byear" id="year">년
+                        <select name="month" id="Bmonth">
+                            <option value="">선택</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>월
+                        <select name="day" id="Bday">
+                            <option value="">선택</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+
+                        <input type="radio" name="calender" id="calender" value="lunar">음력
+                        <input type="radio" name="calender" id="calender" value="gregorian">양력
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" id="sTitle">*주소</td>
+                    <td>
+                        <input type="text" name="address1" id="address1">
+                        <input type="button" value="우편번호 찾기">
+                    </td>
+                </tr>
+                <tr><td>
+                    <input type="text" name="address1" id="address1" style="width:300px">
+                </td></tr>
+                <tr>
+                    <td rowspan="2" id="sTitle">*전화번호</td>
+                    <td>
+                        <span style="color:brown">핸드폰</span>
+                        <input type="tel" name="phone1" id="phone1" style="width:50px"> - <input type="tel" name="phone2" id="phone2" style="width:50px"> - <input type="tel" name="phone3" id="phone3" style="width:50px">
+                        <input type="radio" name="telecom" id="telecom" value="SKT">SKT <input type="radio" name="telecom" id="telecom" value="KT">KT <input type="radio" name="telecom" id="telecom" value="LGT">LGT
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span style="color:brown">집/회사</span>
+                        <input type="tel" name="Home1" id="Home1" style="width:50px"> - <input type="tel" name="Home2" id="Home2" style="width:50px"> - <input type="tel" name="Home3" id="Home3" style="width:50px">
+                        <span id="caution">최소 한개는 입력하세요</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sTitle">*직업</td>
+                    <td>
+                        <select name="job" id="job">
+                            <option value="">직업을 선택하세요</option>
+                            <option value="Developer">개발자</option>
+                            <option value="Designer">디자이너</option>
+                            <option value="Teacher">교사</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sTitle">이메일</td>
+                    <td>
+                        <input type="text" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sTitle">메일수신</td>
+                    <td>
+                        <input type="checkbox" name="getEmail" id="getEmail" value="true">받습니다.
+                        <input type="checkbox" name="getEmail" id="getEmail" value="false">받지 않겠습니다.
+                        <span id="caution">다양하고 유익한 정보, 메일로 받아보세요.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sTitle">SMS수신</td>
+                    <td>
+                        <input type="checkbox" name="getSMS" id="getSMS" value="true">받습니다.
+                        <input type="checkbox" name="getSMS" id="getSMS" value="false">받지 않겠습니다.</td>
+                </tr>
+                <tr>
+                    <td id="sTitle">가입인사</td>
+                    <td>
+                        <textarea name="greeting" id="greeting" cols="60" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style="text-align: center;">
+                            <input type="submit" value="확인">
+                            <input type="reset" value="다시입력">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+<!-- 2023-02-27-exercise.html
+    과제 유재원
+-->

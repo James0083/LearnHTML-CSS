@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex33list.html</title>
+    <style>
+        /* class가 menu가 아닌 ul > li에 아래 스타일을 주세요   (실습)
+            테두리: 1px solid 색상
+            안쪽여백: 5px
+            바깥여백: 5px            
+        */
+        ul:not(.menu)>li{
+            border: 1px solid salmon;
+            padding: 5px;
+            margin: 5px;
+            /* list-style-type: none; */
+            list-style-type: square;
+            list-style-position: inside; /* outside가 디폴트값 */
+            list-style-image: url(../images/icon1.png);
+            /* **list-style-image속성은 이미지 조절하는 속성은 없고요...li에 배경이미지로 넣어서 배경 이미지의 position과 size 잡는 방식으로 한다고 하네요 */
+        }
+        ol>li{
+            list-style-type: upper-roman;
+        }
+
+        /* .menu > li 에 대해 아래와 같이 스타일정의하기    (실습)
+	   - 폭:120px  높이:25px
+	   - 배경색: lightblue;
+	   - 마진: 3px
+	   - 패딩: 10px
+	   - 글자색: 알아서
+	   - 서체: Helvetica, sans-serif
+	   - 글자크기 : 13px;
+	   - 글자정렬: 중앙에 오도록*/
+       .menu>li{
+        width: 120px;
+        height: 25px;
+        background-color: lightblue;
+        margin: 3px;
+        padding: 10px;
+        /* color: saddlebrown; */
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        text-align: center;
+        /* vertical-align: middle; */
+        /* 박스 정렬방향 설정 - float속성
+            float속성을 주면 그 아래 요소까지 영향을 받는다.
+            none : 없음 (디폴트값)
+            left : 왼쪽 기준 정렬
+            right : 오른쪽 기준 정렬*/
+        float: left;
+        float: right;
+       }
+       .menu+hr{
+            margin: 10px;
+            clear: both;
+            /* float속성을 준 것을 해제
+            clear : left, right, both */
+       }
+       a:link{
+        text-decoration: none;
+       }
+    </style>
+</head>
+<body>
+    <h1>목록 스타일</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+    </ul>
+    <hr>
+    <ol>
+        <li>Oracle</li>
+        <li>SQL Server</li>
+        <li>Infomix</li>
+    </ol>
+    <hr color="red">
+    <ul class="menu">
+        <li><a href="http://www.naver.com">HTML</a></li>
+        <li><a href="http://www.naver.com">CSS</a></li>
+        <li><a href="http://www.naver.com">JavaScript</a></li>
+        <li><a href="http://www.naver.com">Java</a></li>
+    </ul>
+    <hr color="blue">
+</body>
+</html>
+<!-- ex33list.html -->

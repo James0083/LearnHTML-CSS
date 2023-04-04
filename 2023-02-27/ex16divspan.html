@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex16divspan.html</title>
+    <style type="text/css">
+        div{
+            background-color:aquamarine;
+            margin: 10px;   /*바깥 여백*/
+            padding: 10px;  /*안쪽 여백*/
+            width: 120px;
+            height: 120px;
+
+        }
+        /* span태그에 대해 아래 스타일 적용(실습)
+            폭 : 200px
+            높이 : 80px
+            배경색 : 알아서
+            안쪽여백 : 8px
+            바깥여백 : 12px
+            @@inline요소들은 width, height속성이 적용되지 않는다
+        */
+        span{
+            width: 200px;
+            height: 80px;
+            background-color: cornflowerblue;
+            margin: 12px;
+            padding: 8px;
+            display: inline-block; /* inline 성질을 유지하면서 블럭요소로 바꿈 */
+        }
+    </style>
+</head>
+<body>
+    <h1>공간분할 태그(div, span)</h1>
+    <h2>블럭요소 : div, 인라인요소 : span</h2>
+
+    <hr color="red">
+    <div>하늘</div>
+    <div>바다</div>
+    <div>땅</div>
+    <hr>
+    <span>봄</span>
+    <span>여름</span>
+    <span>가을</span>
+    <span>겨울</span>
+</body>
+</html>
+<!-- ex16divspan.html -->

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex41important.html</title>
+    <style>
+        p{
+            color: red !important;
+        }
+        #obj{
+            color: blue;
+            font-size: 2em;
+        }
+        div.desert{
+            font-size: 2em;
+            color: chocolate;
+        }
+        .desert{
+            color: green;
+        }
+        div{
+            color: blue;
+        }
+        /* em, rem */
+        .parent{
+            color: orangered;
+            font-size: 2em;     /* 2배 */
+        }
+        .child{
+            /* font-size: 2em; */
+            /* 4배(2*2) */
+            /* em은 부모 스타일을 상속해서 n배 한다. */
+            font-size: 2rem;
+            /* rem은 독립적으로 기본 폰트 사이즈의 n배 */
+        }
+    </style>
+</head>
+<body>
+    <p id="obj">
+        Will be red
+    </p>
+    <div class="desert">
+        Will be Chocolate
+    </div>
+    <hr color="blue">
+    <div class="parent">
+        Parent Div
+        <div class="child">
+            Child Div
+        </div>
+    </div>
+</body>
+</html>
+<!-- ex41important.html -->

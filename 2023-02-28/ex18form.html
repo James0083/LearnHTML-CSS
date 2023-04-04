@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ex18form.html</title>
+        <style type="text/css">
+            fieldset{
+                padding: 20px;
+            }
+            input{
+                width: 40%;
+                padding: 3px;
+            }
+            label{
+                width: 200px;
+                display: inline-block;
+            }
+            button{
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML5에 추된 입력 양식</h1>
+        <fieldset>
+            <legend>::회원가입 양식::</legend>
+            <form name="joinF" action="join.jsp" method="get">
+                <label for="uEmail">이메일</label>
+                <!-- for속성 : 어떤 요소를 위한 라벨인지 표시 => 시각장애인이 사용하는 Screen Reader 등에 사용 -->
+                <input type="email" name="userEmail" id="uEmail" required multiple style="width: 60%;"><br><br>
+                <!-- type을 email로 지정하면 이메일 형식에 맞느지 여부를 체크함 
+                    이메일 형식에 맞지 않을 경우 에러 메시지를 출력
+                    - multiple: 콤마(,)로 연결하여 이메일을 여러 개 입력 가능
+                    - required: 필수로 입력해야 함을 의미한다
+                -->
+                <label for="homepage">홈페이지</label>
+                <input type="url" name="homepage" id="homepage" placeholder="URL형식으로 기술하세요" style="width: 60%;">
+                <!-- type="url" : URL형식이 아니면 에러 메시지를 출력
+                    ex) http://www.naver.com
+                        ftp://ddd.a.b.c
+                -->
+                <br><br>
+                <label for="birth">생년월일</label>
+                <input type="date" name="birth" id="birth">
+                시분초 <input type="time" name="time" id="time">
+                <br><br>
+                <label for="phone">연락처</label>
+                <input type="tel" name="phone" id="phone">
+                <!-- type이 tel일 경우 url, email과는 달리 전화번호 형식에 맞지 않는다고 에러를 풀력하지는 않는다.
+                    모바일 기기에서 이 형식을 사용하면 숫자 패드가 나타나 입력을 받는다. -->
+                <br><br>
+                <label for="cr">좋아하는 색상</label>
+                <input type="color" name="cr" id="cr" >
+                    <!-- 
+                        red : 0~255
+                        green : 0~25
+                        blue : 0~255
+                        16진수 : 0~9, 10,11,12,13,14,15
+                                0~9, a, b, c, d, e, f
+                     -->
+                <br><br>
+                <label for="rgb">RGB범위</label>
+                <input type="range" name="rgb" id="rgb">
+                <br><br>
+
+                <label for="age">나이</label>
+                <input type="number" name="age" id="age" min="19" max="120">
+
+                <br><br>
+                <button type="submit">회원가입</button>
+                <!-- button 태그는 디폴트가 submit -->
+                <button type="reset">다시쓰기</button>
+                <button type="button" onclick="joinF.submit()">일반버튼</button>
+            </form>
+        </fieldset>
+    </body>
+</html>
+<!-- ex18form.html -->

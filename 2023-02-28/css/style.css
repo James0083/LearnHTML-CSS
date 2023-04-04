@@ -1,0 +1,16 @@
+@charset "UTF-8";
+body{
+    color:blueviolet;
+    font-size:2em;
+}
+/* div선택해서
+    서체: 궁서체
+    글자색: 알아서
+    바깥여백: 1em
+    배경색: 알아서
+*/
+div{
+    font-family: 궁서체, sans-serif;
+    margin: 1em;
+    background-color: chartreuse;
+}
